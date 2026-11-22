@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Rick Rothbart builds hardware and software that help research teams move faster with AI. Experimental systems, fabrication, and engineering tools.">
-  <title>Rick Rothbart | Hardware, software, and AI-assisted research</title>
+  <meta name="description" content="Rick Rothbart builds the test rigs, shops, and software that research teams need to test ideas faster. Experimental systems, fabrication, and engineering tools for AI-assisted research.">
+  <title>Rick Rothbart | Test rigs, fabrication, and software for research teams</title>
   <link rel="canonical" href="https://rickrothbart.com/">
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="preload" href="assets/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20260913d">
+  <link rel="stylesheet" href="styles.css?v=20261122a">
   <script src="assets/miso.js" defer></script>
 </head>
 <body>
@@ -26,13 +26,27 @@
     <section class="intro" id="home" aria-labelledby="intro-title">
       <div>
         <h1 id="intro-title">Rick Rothbart</h1>
-        <p class="intro-text">I build hardware and software that help research teams move faster with AI.</p>
+        <p class="intro-text">I build the test rigs, shops, and software that research teams need to test their ideas faster.</p>
+        <p class="intro-more">A lot of that work now is connecting the rig, the parts, and the data so that AI tools can help with the research. I’ve done it for data-center cooling and carbon capture, and before that I ran a college makerspace.</p>
         <p class="intro-context">Currently at <a href="https://www.orbitalindustries.com/">Orbital Industries</a>.<br>Previously at Noya and Laney College.</p>
       </div>
       <figure class="portrait">
         <img src="assets/rick.jpg" width="1027" height="1283" alt="Rick hiking in the Sierra Nevada">
         <figcaption>In the Sierra Nevada.</figcaption>
       </figure>
+    </section>
+
+    <section id="overview" class="text-section" aria-labelledby="overview-title">
+      <h2 id="overview-title">What I do</h2>
+      <div>
+        <p>My job title has changed a few times, but the work is usually the same. A team has an idea it can’t test yet, and I build what’s missing so it can.</p>
+        <dl class="areas">
+          <div><dt>Test systems</dt><dd>Rigs and benches for cooling and carbon capture, from the first layout through hazard review, commissioning, and the repairs that keep them running.</dd></div>
+          <div><dt>Fabrication</dt><dd>Shops, machines, tooling, and supplier work, so a design change can become a part in days.</dd></div>
+          <div><dt>Engineering software</dt><dd>Tools that record what a rig is, what was tested, and what the team decided, so people and AI tools work from the same information.</dd></div>
+          <div><dt>Teaching and handoff</dt><dd>Design guides, training, and procedures, so other people can use what I set up.</dd></div>
+        </dl>
+      </div>
     </section>
 
     <section id="work" class="work" aria-labelledby="work-title">
@@ -52,8 +66,10 @@
           <details>
             <summary>More about the research</summary>
             <div class="detail-body">
+              <p>When the program moved to two-phase cooling, I proposed testing one cold plate at a time on a simpler bench. The team adopted that approach, and I led the early design of the rig.</p>
               <p>I worked with the team on changes to the rig, test procedures, and the contact surfaces that affect our measurements. Getting those details right helps us understand whether a design change actually improved cooling.</p>
               <p>The design workflow used experimental data and basic physics models to propose new lids. We tested the resulting parts, and another engineer built on the workflow. The generated designs hadn’t outperformed our best existing lid at that stage, but we had a working path from an AI-assisted proposal to a physical experiment.</p>
+              <p>I also led the hazard reviews for the rig and wrote our respiratory protection program with outside specialists, so the team had documented safeguards and training as refrigerant testing expanded.</p>
             </div>
           </details>
         </div>
@@ -74,6 +90,7 @@
             <div class="detail-body">
               <p>The work grew into an engineering workbench built around DEXPI, a standard for exchanging plant engineering data. I worked on keeping the model consistent with the physical rig and giving components stable identities as the design changed.</p>
               <p>I also worked on connecting experimental runs to the parts being tested. That context matters when an engineer or an AI tool tries to compare results or propose the next experiment.</p>
+              <p>On the simulation side, I built tools for running and monitoring the team’s flow simulations and recovering runs that were interrupted. In one AI-assisted comparison, the overall error score looked fine but some of the trends were wrong. I flagged it so the limits of the model were clear before anyone made design decisions from it.</p>
             </div>
           </details>
         </div>
@@ -90,12 +107,14 @@
             <h3 id="cnc-title">Getting research parts made</h3>
             <p class="project-context">Orbital Industries, 2026</p>
           </div>
-          <p>I brought a new milling capability from equipment selection through commissioning and early cold-plate samples. I also work with suppliers on cooling surfaces that need other fabrication methods.</p>
+          <p>I brought a new milling capability from equipment selection through commissioning and early cold-plate samples, and set up 3D printing alongside it. For parts that suit it, we can now go from a design to a physical prototype in days. Outside fabrication can take weeks or months.</p>
+          <p>I also work with suppliers on cooling surfaces that need other fabrication methods.</p>
           <p>My part is working out what can be made, getting the tooling and drawings ready, and checking the parts before they go into a test.</p>
           <details>
             <summary>More about fabrication</summary>
             <div class="detail-body">
               <p>Setting up the shop included preparing the space, coordinating training, and writing a design guide. I also built software for tooling records and machine integration.</p>
+              <p>When I connected the mill to our AI tools, I added operator confirmation and machine-state checks, and I was explicit about what a software stop command can’t be relied on to do. A person still verifies the setup before anything cuts.</p>
               <p>For supplier-made samples, I compare fabrication routes and ask how bonding or finishing might change the surface we’re trying to test. I document inspection methods and their limits so the team knows what we’ve actually checked.</p>
             </div>
           </details>
@@ -116,7 +135,7 @@
             <p class="project-context">Orbital Industries, 2026</p>
           </div>
           <p>I built an automated bot that joins live meetings, captures the audio, and transcribes the conversation as it happens. It separates speech by speaker and uses participant information to help identify who said what.</p>
-          <p>I connected it to our research tools so the team can turn conversations into decisions, risks, and action items, with the transcript there when we need the context.</p>
+          <p>I connected it to our research tools so the team can turn conversations into decisions, risks, and action items, with the transcript there when we need the context. By late July 2026 it had recorded 185 meetings.</p>
           <details>
             <summary>More about the bot</summary>
             <div class="detail-body">
@@ -128,18 +147,36 @@
       </article>
       <article class="project" aria-labelledby="noya-title">
         <div class="project-heading">
-          <h3 id="noya-title">Test benches for carbon capture</h3>
+          <h3 id="noya-title">Test benches and a shop for carbon capture</h3>
           <p class="project-context">Noya, 2023–2025</p>
         </div>
         <div class="project-body">
-          <p>I built thermal-imaging and pressure-drop test rigs, helped coordinate prototype builds, and set up a fabrication shop.</p>
+          <p>I built thermal-imaging and pressure-drop test rigs, ran a three-week prototype build across four engineering groups, and set up a fabrication shop from scratch.</p>
           <details>
-            <summary>More about the thermal test bench</summary>
+            <summary>More about the test benches</summary>
             <div class="detail-body">
               <p>I built a test bench that uses three thermal cameras to watch a part as it heats. A Python application controls the temperature, records the images, and combines them into a temperature map.</p>
-              <p>Testing went from roughly 30–40 minutes per part to 5–10 minutes, and engineers no longer had to watch each run.</p>
+              <p>Testing went from roughly 30–40 minutes per part to 5–10 minutes, and engineers no longer had to watch each run. That mattered because there were about 1,000 parts to get through.</p>
+              <p>The pressure-drop fixture clamps a part with a measured force so it seals the same way every time, then runs up to 500 SLPM of air through it while logging pressure, temperature, and humidity. I checked it against a pipe of known dimensions and against results from another lab.</p>
             </div>
           </details>
+          <details>
+            <summary>More about the build and the shop</summary>
+            <div class="detail-body">
+              <p>For the prototype build, I ran daily stand-ups across controls, process, mechanical, and electrical, kept the schedule in order, and told leadership early when something was at risk. We hit the three-week target.</p>
+              <p>For the shop, I gathered requirements from each team, laid out a 2,000 sq ft space in CAD, sourced the main tools, and wrote the procedures and training. Parts that used to mean a multi-week wait could be made the same day.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+      <article class="project" aria-labelledby="laney-title">
+        <div class="project-heading">
+          <h3 id="laney-title">A makerspace for 1,500 students</h3>
+          <p class="project-context">Laney College, 2016–2023</p>
+        </div>
+        <div class="project-body">
+          <p>I built the makerspace program at Laney College and ran the lab. Over seven years I taught more than 1,500 students to use laser cutters, CNC machines, and 3D printers.</p>
+          <p>Most of them had never used the machines before. Setting things up so someone new can use them safely is still a big part of how I work.</p>
         </div>
       </article>
     </section>
@@ -147,7 +184,7 @@
     <section id="about" class="text-section" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div>
-        <p>I grew up in the Bay Area. Before working on climate hardware, I ran the makerspace at Laney College and helped students learn to use tools and make things.</p>
+        <p>I grew up in the Bay Area. I started out teaching: before working on climate hardware, I ran the makerspace at Laney College and helped students learn to use tools and make things.</p>
         <p>Outside work, I’m usually planning a backpacking trip or bike ride, cooking for friends, organizing something with my camp, or figuring out what needs fixing on a truck.</p>
         <p>I care about reducing our impact on the environment, and I like putting practical skills toward that work.</p>
         <dl class="experience">
